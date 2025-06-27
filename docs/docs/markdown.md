@@ -189,6 +189,28 @@ This will be rendered as:
 
 ![alt-text](https://learn.microsoft.com/en-us/media/learn/not-found/learn-not-found-light-mode.png?branch=main)
 
+### Image resizing
+To resize images you can use markdig style nomenclature.
+
+Enable the generic attribute markdig extension in ``docfx.json``
+```json
+{
+  "build": {
+    "markdownEngineProperties": {
+      "markdigExtensions": [
+        "attributes"
+      ]
+    }
+  }
+}
+```
+
+Use this markdown syntax: ``![alt-text](https://learn.microsoft.com/en-us/media/learn/not-found/learn-not-found-light-mode.png?branch=main){width=250 height=120}``
+
+This will render as:
+
+![alt-text](https://learn.microsoft.com/en-us/media/learn/not-found/learn-not-found-light-mode.png?branch=main){width=250 height=120}
+
 ## Math Expressions
 
 Docfx supports [LaTeX formatted math expressions](https://en.wikibooks.org/wiki/LaTeX/Mathematics) within markdown using [MathJax](https://docs.mathjax.org/en/latest/#).
